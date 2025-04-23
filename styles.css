@@ -244,12 +244,12 @@ header {
 /* footer */
 footer {
   background: var(--secondary-color);
-  color: #666;
+  color: #fff;
   padding: 3rem 2rem;
 }
 
 .footer-content {
-  max-width: auto;
+  max-width: autox;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
