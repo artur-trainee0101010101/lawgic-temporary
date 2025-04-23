@@ -246,14 +246,12 @@ footer {
   background: var(--secondary-color);
   color: #fff;
   padding: 3rem 2rem;
-  width: 100%; /* full width */
-  padding-left: 2rem;
-  padding-right: 2rem;
+  width: 100%; /* full width background */
 }
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto; /* ⬅️ This centers it */
+  margin: 0 auto; /* centers the content */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
@@ -266,6 +264,7 @@ footer {
 
 .footer-column ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .footer-column li {
