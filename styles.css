@@ -244,7 +244,7 @@ header {
 /* footer */
 footer {
   background: var(--secondary-color);
-  color: #fff;
+  color: #666;
   padding: 3rem 2rem;
 }
 
