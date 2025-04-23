@@ -252,8 +252,8 @@ footer {
 }
 
 .footer-content {
-  max-width: autox;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto; /* ⬅️ This centers it */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
