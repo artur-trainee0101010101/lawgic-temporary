@@ -93,34 +93,46 @@
     margin-bottom:1.5rem;
     color:var(--secondary-color);
   }
-  
-  /* cards grid */
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-    gap:2rem;
-    margin-top:2rem;
-  }
-  .card{
-    background:#fff;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,.05);
-    transition:transform .3s,box-shadow .3s;
-  }
-  .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
   }
   
-  /* ─── Card images – 360 × 225 responsive ───────────────────────── */
-  .card img{
-    width:100%;
-    aspect-ratio:16/10;           /* ≈360 × 225, fluid on phones */
-    object-fit:cover;             /* crop without distortion    */
-    display:block;
-    border-bottom:1px solid #eee;
+  .card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    flex: 1;
+  }
+ 
   /* fallback for browsers without aspect‑ratio support */
   @supports not (aspect-ratio: 16/10){
     @media (min-width:769px){
@@ -129,11 +141,23 @@
   }
   /* ──────────────────────────────────────────────────────────────── */
   
-  .card-content{padding:1.5rem;}
-  .card h3{font-size:1.3rem;margin-bottom:.75rem;color:var(--secondary-color);}
-  .card p{color:#666;margin-bottom:1rem;}
-  .card a{color:var(--primary-color);text-decoration:none;font-weight:500;}
-  .card a:hover{text-decoration:underline;}
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .card img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .card-content {
+      align-items: center;
+    }
+  }
   
   /* featured articles */
   .featured-content{padding:3rem 0;}
