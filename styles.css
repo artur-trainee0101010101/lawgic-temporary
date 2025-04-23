@@ -249,7 +249,7 @@ footer {
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
