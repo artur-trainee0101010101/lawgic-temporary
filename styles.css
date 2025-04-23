@@ -139,7 +139,7 @@ header {
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 130px;
   object-fit: cover;
   display: block;
 }
